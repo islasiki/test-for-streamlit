@@ -108,12 +108,12 @@ Tumor image editor is mainly a fusion of natural language and image segmentation
         )
     if uploaded_file is not None:
     #src_image = load_image(uploaded_file)
-    unloaded_image = Image.open(uploaded_file)	
+        unloaded_image = Image.open(uploaded_file)	
 	
-    st.image(uploaded_file, caption='Input Image', use_column_width=True)
+        st.image(uploaded_file, caption='Input Image', use_column_width=True)
     #st.write(os.listdir())
-    im = imgGen2(uploaded_file)	
-    st.image(im, caption='ASCII art', use_column_width=True) 
+        im = imgGen2(uploaded_file)	
+        st.image(im, caption='ASCII art', use_column_width=True) 
 
 
 def app_sst(model_path: str, lm_path: str, lm_alpha: float, lm_beta: float, beam: int):
