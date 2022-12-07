@@ -114,6 +114,10 @@ Tumor image editor is mainly a fusion of natural language and image segmentation
     #st.write(os.listdir())
         im = imgGen2(uploaded_file)	
         st.image(im, caption='ASCII art', use_column_width=True) 
+    st.markdown("""
+    the result of Tumor predict is
+    """)
+
 
 
 def app_sst(model_path: str, lm_path: str, lm_alpha: float, lm_beta: float, beam: int):
