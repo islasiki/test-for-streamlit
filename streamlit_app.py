@@ -106,6 +106,14 @@ Tumor image editor is mainly a fusion of natural language and image segmentation
         app_sst_with_video(
             str(MODEL_LOCAL_PATH), str(LANG_MODEL_LOCAL_PATH), lm_alpha, lm_beta, beam
         )
+    if uploaded_file is not None:
+    #src_image = load_image(uploaded_file)
+    image = Image.open(uploaded_file)	
+	
+    st.image(uploaded_file, caption='Input Image', use_column_width=True)
+    #st.write(os.listdir())
+    im = imgGen2(uploaded_file)	
+    st.image(im, caption='ASCII art', use_column_width=True) 
 
 
 def app_sst(model_path: str, lm_path: str, lm_alpha: float, lm_beta: float, beam: int):
