@@ -96,7 +96,7 @@ Tumor image editor is mainly a fusion of natural language and image segmentation
 
     sound_only_page = "Sound only (sendonly)"
     with_video_page = "With video (sendrecv)"
-    app_mode = st.selectbox("Choose the app mode", [sound_only_page, with_video_page])
+    app_mode = st.selectbox("Choose the app mode to start use voice commands", [sound_only_page, with_video_page])
 
     if app_mode == sound_only_page:
         app_sst(
